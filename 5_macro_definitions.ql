@@ -1,5 +1,5 @@
 import cpp
 
 from Macro f
-where f.getName() = "ntohs" or f.getName() = "ntohl" or f.getName() = "ntohll"
-select f, "a function named ntohs"
+where f.getName().regexpMatch("ntoh(s|l|ll)")
+select f
